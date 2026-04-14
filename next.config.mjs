@@ -1,13 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  cacheComponents: true,
 
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "placecats.com",
-        pathname: "/neo/**",
+        hostname: "storage.googleapis.com",
+
+        pathname: "/**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "cdn4.thedogapi.com",
+
+        pathname: "/**",
       },
     ],
   },
